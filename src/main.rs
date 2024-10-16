@@ -9,6 +9,18 @@ fn foo() -> HashMap<String, HexValue>{
     Default::default()
 }
 
+pub enum HexValue {
+    Bool(bool),
+    Int64(i64),
+    Double(f64),
+    String(String),
+    ByteArray(Vec<u8>),
+    BoolArray(Vec<bool>),
+    Int64Array(Vec<i64>),
+    DoubleArray(Vec<f64>),
+    StringArray(Vec<String>),
+}
+
 fn main(){
     // Can we auto gen this?
     let param_config = vec![
